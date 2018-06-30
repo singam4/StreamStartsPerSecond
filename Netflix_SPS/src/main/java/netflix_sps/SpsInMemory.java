@@ -104,7 +104,11 @@ public class SpsInMemory {
 
 						// Add to results hash map for this duration of the second
 						String key = device + "@" + title + "@" + country;
-						results.merge(key, 1, Integer::sum);
+						if (results.containsKey(key)) {
+							results.replace(key, results.get(key) + 1);
+						} else {
+							results.put(key, 1);
+						}
 					}
 
 				} catch (Exception e) {
