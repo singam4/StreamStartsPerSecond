@@ -18,7 +18,7 @@ public class SpsInMemory {
 	private static HttpURLConnection conn;
 
 	public static void main(String[] args) {
-		Queue<String> mq1 = new ArrayBlockingQueue<String>(1024);
+		final Queue<String> mq1 = new ArrayBlockingQueue<String>(1024);
 
 		// Ingester thread
 		Thread ingester = new Thread() {
