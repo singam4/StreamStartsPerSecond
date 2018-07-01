@@ -41,7 +41,7 @@ public class SpsDiskBacked {
 
 	public static void main(String[] args) {
 
-		BlockingQueue<String> bq1 = new ArrayBlockingQueue<String>(2048);
+		final BlockingQueue<String> bq1 = new ArrayBlockingQueue<String>(2048);
 		final String newLine = System.getProperty("line.separator");
 
 		// Ingester thread
