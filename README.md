@@ -10,8 +10,10 @@
 ## Run
 #### Persistent version
 ##### $ mvn -q exec:java -e -Dexec.mainClass=netflix_sps.StreamStartsPerSecond
-#### In-memory version
+#### In-memory version (6/29)
 ##### $ mvn -q exec:java -e -Dexec.mainClass=netflix_sps.SpsInMemory
+#### Disk backed in-memory version (6/30)
+##### $ mvn -q exec:java -e -Dexec.mainClass=netflix_sps.SpsDiskBacked
 
 ## Example output 
 ##### {"device": "xbox_360", "sps": 36, "title": "stranger things", "country": "UK"}
